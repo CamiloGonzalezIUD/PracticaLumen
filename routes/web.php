@@ -17,22 +17,31 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('/home', function () {
-    return "desde home con return";
-});
-$router->post('/home', function () {
-    return "desde home post";
-});
-$router->put('/update', function () {
-    return "desde update";
-});
-$router->delete('/delete', function () {
-    return "desde delete";
-});
+$router->get('/libros','LibroController@index');
+
+//se crea ruta con petición get cambiamos la función por el nombre del controlador y el nombre del metodo.
     
 
-//AÑADIR PARAMETROS A LAS RUTAS - INTERPOLACIÓN DE VARIABLES
+
+// $router->get('/home', function () {
+//     return "desde home con return";
+// });
+// $router->post('/home', function () {
+//     return "desde home post";
+// });
+// $router->put('/update', function () {
+//     return "desde update";
+// });
+// $router->delete('/delete', function () {
+//     return "desde delete";
+// });
+    
+
+ //AÑADIR PARAMETROS A LAS RUTAS - INTERPOLACIÓN DE VARIABLES
  
-$router->get('/saludo/{nombre}', function ($nombre) {
-    return "Saludos".$nombre;
-});
+// $router->get('/saludo/{nombre}', function ($nombre) {
+//     return "Saludos".$nombre;
+// });
+
+
+
